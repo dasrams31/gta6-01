@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEON BAY — Open World Crime</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="hud" class="hidden">
+    <div id="hud-top-left">
+      <div id="cash">$0</div>
+      <div id="healthbar"><div id="healthfill"></div></div>
+      <div id="armorbar"><div id="armorfill"></div></div>
+      <div id="ammo">PISTOL &infin;</div>
+    </div>
+    <div id="hud-top-right">
+      <div id="clock">09:00</div>
+      <div id="wanted"></div>
+      <div id="speed">0 mph</div>
+    </div>
+    <div id="objective"><span id="obj-title">NEON BAY</span><span id="obj-text"></span></div>
+    <div id="mission-banner" class="hidden"><div id="banner-title"></div><div id="banner-sub"></div></div>
+    <div id="toast"></div>
+    <div id="minimap-wrap"><canvas id="minimap" width="220" height="165"></canvas><div id="minimap-label">NEON BAY</div></div>
+    <div id="controls-hint">WASD move &nbsp;·&nbsp; E enter / steal car &nbsp;·&nbsp; Mouse aim, Click shoot &nbsp;·&nbsp; Space punch &nbsp;·&nbsp; Shift sprint &nbsp;·&nbsp; M mute &nbsp;·&nbsp; Esc pause</div>
+    <div id="vignette"></div>
+  </div>
+  <div id="title-screen">
+    <div class="title-inner">
+      <div class="title-kicker">A SUN-SOAKED OPEN WORLD &middot; AN ORIGINAL CRIME STORY</div>
+      <h1>NEON<span>BAY</span></h1>
+      <p class="tagline">Steal cars. Outrun the law. Take back the city.</p>
+      <p class="story">You are <b>Rio Marlowe</b>, a wheelman fresh out of the Bay State pen.
+      The <b>Coral Kings</b> run Neon Bay now — and your old friend <b>Mara Voss</b> has a plan
+      to take it all back, one job at a time.</p>
+      <div class="title-buttons">
+        <button id="btn-new">NEW GAME</button>
+        <button id="btn-continue">CONTINUE</button>
+        <button id="btn-how">HOW TO PLAY</button>
+      </div>
+      <div id="howto" class="hidden">
+        <b>WASD / Arrows</b> — drive &amp; walk &nbsp;·&nbsp; <b>E</b> — enter / steal a car &nbsp;·&nbsp;
+        <b>Mouse + Click</b> — aim &amp; shoot &nbsp;·&nbsp; <b>Space</b> — punch &nbsp;·&nbsp;
+        <b>Shift</b> — sprint &nbsp;·&nbsp; <b>P</b> — pause &nbsp;·&nbsp; <b>M</b> — mute<br>
+        Stealing cars, hitting pedestrians and shooting raise your <b>WANTED</b> level.
+        The Neon Bay PD responds — lose them to cool off. Follow the gold marker to run missions.
+        Progress auto-saves.
+      </div>
+      <div class="title-foot">NEON BAY &middot; an original game &middot; no real places, people or brands &middot; v1.0</div>
+    </div>
+  </div>
+  <div id="pause-screen" class="hidden">
+    <h2>PAUSED</h2>
+    <p>Neon Bay waits for no one. Except now.</p>
+    <button id="btn-resume">RESUME</button>
+    <button id="btn-quit-title">QUIT TO TITLE</button>
+  </div>
+  <div id="gameover-screen" class="hidden">
+    <h2 id="go-title">BUSTED</h2>
+    <p id="go-text"></p>
+    <div id="go-stats"></div>
+    <button id="btn-retry">TRY AGAIN</button>
+    <button id="btn-go-title">TITLE SCREEN</button>
+  </div>
+  <div id="win-screen" class="hidden">
+    <h2>KING OF NEON BAY</h2>
+    <p>You took the city back. Mara was right — the Bay belongs to the bold.</p>
+    <div id="win-stats"></div>
+    <button id="btn-freeroam">KEEP PLAYING (FREE ROAM)</button>
+    <button id="btn-win-title">TITLE SCREEN</button>
+  </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
